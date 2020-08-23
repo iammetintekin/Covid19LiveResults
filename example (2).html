@@ -1,0 +1,213 @@
+
+      <!doctype html>
+      <html>
+        <head>
+		    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+          <!-- Place your kit's code here -->
+          <script src="https://kit.fontawesome.com/17cd731a2f.js" crossorigin="anonymous"></script>
+		      <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: rgb(64, 79, 85); 
+          border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #7c7575; 
+        }
+        </style>
+        </head>
+
+        <body>
+ 
+		  
+		      <div class="container-fluid">
+      <div class="row ">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand text-dark" href="#">
+              <label class="text-large" for=""><B>COVID-19</B></label> <small>LIVE</small> <img src="live.png">
+             </a>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">ANASAYFA <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="map.html">HARİTA</a>
+              
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            
+            </div>
+          </nav>
+        </div>
+      </div>
+      <hr style="width:100%;text-align:center;margin-left:0; margin-top:100px">
+  
+      <H3>Dünya Geneli Toplam Veriler</H3>
+      <div class="row">
+
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box text-white bg-secondary rounded m-1">
+            <div class="p-2">
+              <h3 id="totalDeath"></h3>
+              <p>Toplam Ölü</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box bg-light rounded m-1">
+            <div class="p-2">
+              <h3 id="totalRecovered"></h3>
+              <p>Toplam İyileşen</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box text-white bg-secondary rounded m-1">
+            <div class="p-2">
+              <h3 id="totalConfirmed"></h3>
+              <p>Toplam Vakaa</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box bg-light rounded m-1">
+            <div class="p-2">
+              <h3 id="newConfirmed"></h3>
+              <p>Yeni Vaka</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box text-white bg-secondary rounded m-1">
+            <div class="p-2">
+              <h3 id="newDeath"></h3>
+              <p>Yeni Ölüm</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-6">
+          <!-- small box -->
+          <div class="small-box  bg-light rounded m-1">
+            <div class="p-2">
+              <h3 id="newRecovered"></h3>
+              <p>Yeni İyileşen</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="width:100%;text-align:center;margin-left:0">
+        <div class="row">
+            <div class="col-md-12 bg-white ">
+              <div class="header">
+                <H3>LIVE TABLE</H3>
+                <form class="form-header" action="" method="POST">
+                  <input class="au-input au-input--xl" type="text" name="search" placeholder="Search Country">
+                  <button class="au-btn--submit" type="submit">
+                    <i class="fas fa-thumbs-up fa-5x"></i>
+                  </button>
+              </form>
+              </div>
+              
+              
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                <table class="table table-sm table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">COUNTRY</th>
+                        <th scope="col">TOTAL CASE</th>
+                        <th scope="col">TOTAL RECOVERED</th>
+                        <th scope="col">TOTAL DEATH</th>
+                        <th scope="col">NEW DEATH</th>
+                      </tr>
+                    </thead>
+                    <tbody id = "tbody">
+                        <!-- <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr> -->
+                    </tbody>
+                    
+                  </table>
+                  </div>
+
+            </div>
+            
+        </div>
+
+        <p class="m-2" id="sonyenileme"></p>
+        <hr style="width:100%;text-align:center;margin-left:0">
+
+
+
+    </div>
+	<script src="app.js"></script> 
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+        </body>
+      </html>
+      
